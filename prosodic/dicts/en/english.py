@@ -334,7 +334,7 @@ nltk_ssp=None
 def syllabify_orth_with_nltk(token,num_sylls=None):
 	global nltk_ssp
 	if not nltk_ssp:
-		from nltk.tokenize import SyllableTokenizer
+		from nltk.tokenize.sonority_sequencing import SyllableTokenizer
 		nltk_ssp = SyllableTokenizer()
 	l = nltk_ssp.tokenize(token)
 	if not num_sylls or len(l)==num_sylls:
